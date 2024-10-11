@@ -45,10 +45,11 @@ function Form({ callback }) {
         const responseData = await createUser(newUsername, newPassword, role);
         if (responseData.message) {
             alert(responseData.message);
-            closeCreateUserForm();
+            
         } else {           
             alert(`${responseData.msg}`);
         }
+        closeCreateUserForm();
     };
 
 
